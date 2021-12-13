@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Italianno&family=Lobster&display=swap');
+
+
+.over-flow {
+    width: 600px;
+    max-height: 300;
+    overflow: hidden;
+}
+
+.reg-form{
+    width: 350px;
+    height: 350px;
+    margin: auto auto auto auto;
+}
+
+.card-text{
+    font-size: 27px;
+}
+
+.title {
+    font-family: 'Italianno', cursive;
+}
+
+.intro-text {
+    font-size: 38px;
+}

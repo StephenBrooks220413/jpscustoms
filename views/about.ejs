@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header') -%>
+
+<%- include('layouts/navbar') -%>
+
+<body>
+    <!--Main Navigation-->
+
+
+  <!-- Background image -->
+  <div
+    id="intro"
+    class="bg-image"
+    style="
+    background-image: url(https://images.unsplash.com/photo-1613555612473-90cf723dfb60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3Bvb2xzJTIwb2YlMjB0aHJlYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60);
+    height: 35vh;
+    "
+    >
+      <div class="mask text-white" style="background-color: rgba(0, 0, 0, 0.4);">
+        <div class="container d-flex align-items-center text-center h-40">
+          <div class="mt-5">
+            <h1 class="mt-5 display-4">About</h1>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- Background image -->
+
+  <div class="container mt-5 mb-2">
+    <div class="row">
+      <div class="col-md mt-3">
+        <h1 class="display-5">Stitching Together</h1>
+        <hr />
+        <p class="lead">
+          Putting ideas to thread is what I do, and would be glad to help to get yours together.
+        </p>
+      </div>
+      <div class="col-md mt-3">
+        <img src="/img/spools-about.png" 
+          class="img-fluid shadow-2-strong rounded"
+          alt="blog">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card card-body p-5 text-center">
+      <h2>My Partners</h2>
+      <div class="row">
+        <div class="col-md">
+          <a href="https://www.fast-auto-insurance-rates.com/" target="_blank">
+            <img src="/img/fair.png" height="100px" width="100px" alt="fair auto">
+          </a>
+        </div>
+        <div class="col-md">
+          <a href="https://www.clear-web-designs.com/" target="_blank">
+            <img src="/img/cwd.png" height="100px" width="100px" alt="fair auto">
+          </a>
+        </div>
+        <div class="col-md">
+          <a href="https://www.justingershanov.work/content-hub33433703?fbclid=IwAR25CYX_UJEH-eMYpkPpUzBF_ZCqqoW_nPKcuU-SZhTvaYLRtu2QCljvy6c" target="_blank">
+            <img src="/img/exp.png" height="100px" width="100px" alt="fair auto">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-2">
+    <div class="row">
+      <div class="col-md mt-3">
+        <img src="/img/ordering.png" 
+          class="img-fluid shadow-2-strong rounded"
+          alt="blog">
+      </div>
+      <div class="col-md mt-3">
+        <h1 class="display-5">Special Order</h1>
+        <hr />
+        <p class="lead">
+          If you have a design you want and don't see it on our site, then message us your details.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- js -->
+  <%- include('layouts/scripts') -%>
+  <!-- footer -->
+  <%- include('layouts/footer') -%> 
+</body>
+</html>

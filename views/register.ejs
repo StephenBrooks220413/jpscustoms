@@ -1,0 +1,39 @@
+<%- include('layouts/header') -%>
+
+<div class="container align-items-center text-center justify-content-center mt-2 mb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Register</li>
+        </ol>
+    </nav>
+
+    <br><br><br>
+    <h1 class="display-5 mt-5">Register for an account</h1>
+
+    <div class="reg-form">
+        <form class="mt-5 mb-5 text-center" method="post" enctype="multipart/form-data" action="/users/register">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="form-outline">
+                        <input type="text" name="username" id="username" class="form-control" />
+                        <label class="form-label">User Name</label>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" name="password" id="password" class="form-control" />
+                <label class="form-label">Password</label>
+            </div>
+            
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+    
+        </form>
+    </div>
+
+    <%- include('layouts/scripts') -%>
+</div>

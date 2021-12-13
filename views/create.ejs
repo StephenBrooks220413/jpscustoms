@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header') -%>
+
+<%- include('layouts/navbar') -%>
+
+<body>
+    <!--Main Navigation-->
+
+
+  <!-- Background image -->
+  <div
+    id="intro"
+    class="bg-image"
+    style="
+    background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    height: 35vh;
+  "
+  >
+    <div class="mask text-white" style="background-color: rgba(0, 0, 0, 0.4);">
+      <div class="container d-flex align-items-center text-center h-40">
+        <div class="mt-5">
+          <h1 class="mt-5 display-4">Create A Post</h1>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Background image -->
+
+
+    <div class="container mt-5 mb-2">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-5">Write An Article</h1>
+                <hr>
+                <p class="lead">
+                    Write an article and share your thoughts, but keep it tasteful. Be mindful 
+                    of others and do not write anything offensive or include offensive material. 
+                    You post at your own risk.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <form action="/posts/store" method="POST" enctype="multipart/form-data">
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" requried name="title" id="title" class="form-control" />
+                      <label class="form-label">Post Title</label>
+                    </div>
+
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" required name="username" id="username" class="form-control" />
+                      <label class="form-label">Your Name</label>
+                    </div>
+                  
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" required name="email" id="email" class="form-control" />
+                      <label class="form-label">Email address</label>
+                    </div>
+
+                    <!-- image input -->
+                    <!-- <div class="form-outline mb-4">
+                      <input type="file" name="image" id="image" accept="/img/*" class="form-control" />
+                    </div> -->
+                  
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                      <textarea class="form-control" spellcheck="true" max-length="315" required name="body" id="body" rows="4"></textarea>
+                      <label class="form-label">Message</label>
+                    </div>
+                  
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('layouts/scripts') -%>
+
+    <%- include('layouts/footer') -%>
+    
+</body>
+</html>

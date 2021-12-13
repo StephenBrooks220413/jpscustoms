@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header') -%>
+
+<%- include('layouts/navbar') -%>
+
+<body>
+    <!--Main Navigation-->
+
+
+  <!-- Background image -->
+  <div
+    id="intro"
+    class="bg-image"
+    style="
+    background-image: url(https://thumbs.dreamstime.com/b/female-hand-holding-cup-hot-cocoa-chocolate-white-wooden-table-top-view-cup-hot-cocoa-chocolate-236211684.jpg);
+    height: 35vh;
+  "
+  >
+    <div class="mask text-white" style="background-color: rgba(0, 0, 0, 0.4);">
+      <div class="container d-flex align-items-center text-center h-50">
+        <div class="mt-5">
+          <h1 class="mt-5 display-2">Recent Post</h1>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Background image -->
+
+    <% if(blogpost != '') { %>
+
+    <div class="container text-center mt-5 mb-2">
+ 
+        <article>
+            <div class="row mt-5">
+    
+                <div class="card">
+                    <h1 class="card-header"><%= blogpost.title %></h1>
+                    <div class="card-body">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <p class="lead"><%= blogpost.body %></p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="mt-3">
+                            Created By: <%= blogpost.username %>
+                            On <%= blogpost.datePosted.toDateString() %> <br />
+                            <%= blogpost.email %>
+                        </p>
+                    </div>
+                </div>    
+        </article>
+      </div>
+      <% } else { %> 
+        <h1 class="display-3 mt-5 text-center justify-content-center align-items-center">There is no current blogs at this time or there is no connection to the data base.</h1>
+      <% } %>  
+
+    <%- include('layouts/scripts') -%>
+
+    <%- include('layouts/footer') -%>
+    
+</body>
+</html>
